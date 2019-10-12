@@ -1,0 +1,12 @@
+{
+  "name": "DevOpsChallenge",
+  "version": "v0.0.0",
+  "repository": "git@github.com:shipyardapp/DevOpsChallenge",
+  "author": "tech@shipyardapp.com",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "antd": "^3.23.6",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}
