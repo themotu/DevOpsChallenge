@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "serve": "webpack-dev-server",
-    "build": "NODE_ENVIRONMENT=\"production\" webpack"
+    "build": "NODE_ENV=\"production\" webpack"
   },
   "dependencies": {
     "antd": "^3.23.6",
@@ -15,6 +15,17 @@
     "react-dom": "^16.10.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^4.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "webpack": "^4.41.1",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2"
