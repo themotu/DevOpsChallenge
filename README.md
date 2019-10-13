@@ -114,6 +114,37 @@ With your submission, you will need to provide the steps required (after install
 from your archive) to build the solution.
 This means all the steps needed before running `docker run shipyardapp-web`.
 
+After executing docker run, you should see something similar to
+```
+808bf12a-aef3-4f24-8f30-5c0feb6d6f74 <nil>
+/bin/ls [ls -laR ./web/assets/]
+./web/assets/:
+total 28
+drwxr-xr-x. 1 root        root        4096 Oct 13 23:13 .
+drwxr-xr-x. 1 root        root        4096 Oct 13 23:13 ..
+drwxr-xr-x. 2 shipyardapp shipyardapp 4096 Oct 13 23:13 images
+drwxr-xr-x. 2 shipyardapp shipyardapp 4096 Oct 13 23:13 javascripts
+drwxr-xr-x. 2 shipyardapp shipyardapp 4096 Oct 13 23:13 stylesheets
+
+./web/assets/images:
+total 112
+drwxr-xr-x. 2 shipyardapp shipyardapp   4096 Oct 13 23:13 .
+drwxr-xr-x. 1 root        root          4096 Oct 13 23:13 ..
+-rw-rw-r--. 1 shipyardapp shipyardapp 105093 Oct 13 21:41 favicon.ico
+
+./web/assets/javascripts:
+total 144
+drwxr-xr-x. 2 shipyardapp shipyardapp   4096 Oct 13 23:13 .
+drwxr-xr-x. 1 root        root          4096 Oct 13 23:13 ..
+-rw-rw-r--. 1 shipyardapp shipyardapp 132181 Oct 13 23:13 app.js
+
+./web/assets/stylesheets:
+total 2072
+drwxr-xr-x. 2 shipyardapp shipyardapp    4096 Oct 13 23:13 .
+drwxr-xr-x. 1 root        root           4096 Oct 13 23:13 ..
+-rw-rw-r--. 1 shipyardapp shipyardapp 2106023 Oct 13 23:13 app.css
+```
+
 # What if I have questions?
 
 You can [open an issue](https://github.com/shipyardapp/DevOpsChallenge/issues)
