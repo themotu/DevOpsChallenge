@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"time"
 
-	_ "github.com/google/uuid"
+	"github.com/google/uuid"
 )
 
 func main() {
@@ -23,6 +23,8 @@ func main() {
 
 	go func() {
 		for {
+			fmt.Println(uuid.NewRandom())
+
 			cmd := exec.CommandContext(ctx, "ls", "-laR", "./web/assets/")
 			fmt.Println(cmd.Path, cmd.Args)
 
