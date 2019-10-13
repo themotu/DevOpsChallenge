@@ -83,6 +83,8 @@ The following are required:
 5. The version of Node used to build the frontend must be 10.16+.
 6. The frontend artifacts must be placed relative to the working directory at `./web/assets/`
     so that the `shipyard-doc` binary produces the correct output.
+    The files that you need to copy into the conatainer are `javascripts/app.js`,
+    `stylesheets/app.css` and the entire `images` directory.
 7. The container should run under the user `shipyardapp`, and the working directory
     should be that user's home directory. This user should be like any "normal"
     user under Linux, without sudo and other extra permissions.
