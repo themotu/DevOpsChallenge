@@ -114,7 +114,7 @@ This means all the steps needed before running `docker run shipyardapp-web`.
 
 # What if I have questions?
 
-You can [open an issue](https://github.com/shiypardapp/DevOpsChallenge/issues)
+You can [open an issue](https://github.com/shipyardapp/DevOpsChallenge/issues)
 or reach out to the person who gave you the challenge.
 
 # How long should this take?
