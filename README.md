@@ -68,4 +68,64 @@ You can run `yarn install` to install all dependencies when `package.json` and
 
 The goal of this challenge is to output a Docker container that contains the compiled
 artifacts from the backend and frontend sections of the application.
-The container should contain those artifacts in specific locations
+The container should contain those artifacts in specific locations such that running
+the container should result in output similar to what you would get running
+`go run ./app/internal/cli/shipyard-doc/` from the top level directory of this repo.
+
+The following are required:
+1. The version of Go used to compile the backend must be 1.13+.
+2. All Go binaries must be statically compiled. You can use `go build -a -ldflags '-w -extldflags "-static"'` as a guide
+    for the compilation step.
+    You should explicitly disable CGO, and set the GOOS and GOARCH environment
+    variables to linux and amd64, respectively.
+3. All Go binaries must be placed in the `/usr/local/shipyardapp/bin/` directory.
+4. That directory (where the binaries go) should be in PATH, such that entrypoint can simply be "shipyard-doc".
+5. The version of Node used to build the frontend must be 10.16+.
+6. The frontend artifacts must be placed relative to the working directory at `./web/assets/`
+    so that the `shipyard-doc` binary produces the correct output.
+7. The container should run under the user `shipyardapp`, and the working directory
+    should be that user's home directory. This user should be like any "normal"
+    user under Linux, without sudo and other extra permissions.
+8. The final image should be based off of `debian:stretch`.
+9. The image should expose the port 8080 in the Dockerfile.
+10. You should be able to run the container with exactly `docker run shipyardapp-web`.
+    You should be able to stop the container with a `docker stop` command.
+
+## Your Solution
+
+Your solution should be as close to production ready as possible.
+You should first clone this repo and then modify it on your local machine until
+the solution works.
+
+You may add any directories and files you wish.
+We want to see what the end result looks like if you were to treat this like our
+real repository.
+So, any scripts, documentation, or whether else you see fit, should be in the final
+solution.
+
+Points are awarded most for correctness.
+More points are awarded for solutions that are documented, easy to use, require
+few to no more dependencies (outside of Docker, Go, and Node), repeatable,
+and easy to automate and expand upon.
+
+With your submission, you will need to provide the steps required (after installing
+from your archive) to build the solution.
+This means all the steps needed before running `docker run shipyardapp-web`.
+
+# What if I have questions?
+
+You can [open an issue](https://github.com/shiypardapp/DevOpsChallenge/issues)
+or reach out to the person who gave you the challenge.
+
+# How long should this take?
+
+This should take no more than one or two hours.
+If you spend more time on this, then please let us know - it may be too large of
+challenge and we may need to adjust.
+Do your best work.
+Your submission should be a very good indicator of your code in a real project.
+
+# Submitting
+
+You can submit your solution by emailing an archive (zip or tar) of the entire
+repo directory to tech@shipyardapp.com or to the person who gave you the challenge.
