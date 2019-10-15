@@ -1,7 +1,5 @@
 # DevOps Challenge
 
-DevOps challenge for candidates to show us their stuff. 
-
 The point of this challenge is for interviewing candidates to show us how they
 would work through bootstrapping some DevOps and infrastructure related artifacts
 in a repository with some backend and frontend code.
@@ -83,7 +81,7 @@ The following are required:
 1. The version of Go used to compile the backend must be 1.13+.
 2. All Go binaries must be statically compiled. You can use `go build -a -ldflags '-w -extldflags "-static"'` as a guide
     for the compilation step.
-    You should set the CGO_ENABLED, GOOS, and GOARCH environment
+    Before compilation, you should set the CGO_ENABLED, GOOS, and GOARCH environment
     variables to "0", "linux", and "amd64", respectively.
 3. All Go binaries must be placed in the `/usr/local/shipyardapp/bin/` directory
     in the final image.
