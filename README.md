@@ -140,7 +140,7 @@ drwxr-xr-x. 2 shipyardapp shipyardapp 4096 Oct 14 02:26 stylesheets
 total 116
 drwxr-xr-x. 2 shipyardapp shipyardapp   4096 Oct 14 02:26 .
 drwxr-xr-x. 1 shipyardapp shipyardapp   4096 Oct 14 02:26 ..
--rw-rw-r--. 1 shipyardapp shipyardapp 105093 Oct 13 21:41 favicon.ico
+-rw-rw-r--. 1 shipyardapp shipyardapp 719139 Oct 13 21:41 auth-hero-small.jpg
 
 ./web/assets/javascripts:
 total 144
