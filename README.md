@@ -1,4 +1,4 @@
-# DevOpsChallenge
+# DevOps Challenge
 
 DevOps challenge for candidates to show us their stuff. 
 
@@ -9,7 +9,7 @@ The code that is already in this repo isn't the important part.
 The important part is understanding where everything is, what everything is,
 and finding a solution that meets the project requirements.
 
-# Where and What is Everything
+# Project Overview
 
 This repo is set up in a way extremely similar to our main application repo.
 There is a backend and frontend section in the application.
@@ -36,7 +36,7 @@ Go has gotten to the point (since 1.12) where dependencies are managed through
 Go modules.
 We use Go modules to manage our dependencies in this repo, and expect solutions
 to use Go modules as well.
-[Here](https://golang.org) is a link the the main Golang website.
+[Here](https://golang.org) is a link the main Golang website.
 
 In short, with Go modules, packages will be installed as needed, and with the version
 specified in the `go.mod` file.
@@ -105,14 +105,13 @@ real repository.
 So, any scripts, documentation, or whether else you see fit, should be in the final
 solution.
 
-Points are awarded most for correctness.
-More points are awarded for solutions that are documented, easy to use, require
+We will be evaluating the challenge by the level of accuracy and adherance to the requirements.
+You'll score bonus points with us if your solution is well documented, easy to use, requires
 few to no more dependencies (outside of Docker, Go, and Node), repeatable,
 and easy to automate and expand upon.
 
-With your submission, you will need to provide the steps required (after installing
-from your archive) to build the solution.
-This means all the steps needed before running `docker run shipyardapp-web`.
+With your submission, you will need to provide all of the steps required (after installing
+from your archive) to build the solution by running `docker run shipyardapp-web`.
 
 After executing docker run, you should see something similar to
 ```
@@ -152,9 +151,8 @@ or reach out to the person who gave you the challenge.
 
 # How long should this take?
 
-This should take no more than one or two hours.
-If you spend more time on this, then please let us know - it may be too large of
-challenge and we may need to adjust.
+This should take no more than one or two hours and should be completed within 72 hours of receiving the challenge. We realize that extrenuating circumstances can come up, so if you spend more time on this or need more time to complete it - let us know. We're constantly iterating on this project and  are happy to work with you to either adjust the project or the timeline.
+
 Do your best work.
 Your submission should be a very good indicator of your code in a real project.
 
