@@ -93,11 +93,19 @@ The following are required:
     This is required so that the `shipyard-doc` binary produces the correct output.
     The files that you need to copy into the conatainer are `javascripts/app.js`,
     `stylesheets/app.css` and the entire `images` directory.
+
+    There isn't any use for the compiled frontend inside the container aside from
+    it being there for the backend to list it as output.
+    It isn't rendered or served in any way.
+    This requirement stems from the way the application is used in production.
 6. The container should run under the user `shipyardapp`, and the working directory
     should be that user's home directory. This user should be like any "normal"
     user under Linux, without sudo and other extra permissions.
 7. The final image should be based off of `debian:stretch`.
 8. The image should expose the port 8080 in the Dockerfile.
+    This exposed port isn't used.
+    It is there because we have an exposed port in production and want it to be
+    part of the solution.
 9. You should be able to run the container with exactly `docker run shipyardapp-web`.
     You should be able to stop the container with a `docker stop` command.
 
